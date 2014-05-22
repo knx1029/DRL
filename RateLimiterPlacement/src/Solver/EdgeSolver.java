@@ -35,7 +35,7 @@ public class EdgeSolver implements Solver {
         	for (int i = 0; i < src.length; ++i) {
         		Stub src_stub = src[i];
         	    
-        		int src_id = src_stub.edgeSwitchId();
+        		int src_id = src_stub.switchId();
         	    Switch src_switch = graph.getSwitchById(src_id);
         	    Link l = src_switch.getFromLink(src_stub);
         	    ans[l.index()][k] = 1;
@@ -55,7 +55,7 @@ public class EdgeSolver implements Solver {
         	for (int i = 0; i < dst.length; ++i) {
         		Stub dst_stub = dst[i];
         	    
-        		int dst_id = dst_stub.edgeSwitchId();
+        		int dst_id = dst_stub.switchId();
         	    Switch dst_switch = graph.getSwitchById(dst_id);
         	    Link l = dst_switch.getToLink(dst_stub);
         	    ans[l.index()][k] = 1;

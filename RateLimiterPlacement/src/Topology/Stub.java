@@ -10,7 +10,8 @@ public class Stub implements Point {
 		this.num_endpoints = num_ep;
 	}
 	
-	public int edgeSwitchId() {
+        @Override
+	public int switchId() {
 		return id;
 	}
 	
